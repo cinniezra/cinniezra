@@ -1,0 +1,52 @@
+<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="50%" style="stop-color:#f472b6"/>
+      <stop offset="100%" style="stop-color:#c084fc"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#f472b6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0"/>
+      <animate attributeName="x1" values="-50%;50%;-50%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="50%;150%;50%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="250" fill="url(#bg)" rx="6"/>
+
+  <!-- Subtle grid dots -->
+  <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="20" cy="20" r="0.5" fill="#c084fc" opacity="0.15"/>
+  </pattern>
+  <rect width="800" height="250" fill="url(#dots)"/>
+
+  <!-- Name -->
+  <text x="400" y="90" font-family="'Courier New', monospace" font-size="48" font-weight="bold" fill="url(#nameGrad)" text-anchor="middle">cinni</text>
+
+  <!-- Animated line -->
+  <line x1="280" y1="110" x2="520" y2="110" stroke="url(#lineGrad)" stroke-width="1"/>
+
+  <!-- Monster can ASCII art in pink -->
+  <text font-family="'Courier New', monospace" font-size="11" fill="#f472b6" text-anchor="middle">
+    <tspan x="400" dy="30">╭──────╮</tspan>
+    <tspan x="400" dy="13">│▓▓▓▓▓▓│</tspan>
+    <tspan x="400" dy="13">│ ╱╲╱╲ │</tspan>
+    <tspan x="400" dy="13">│▓▓▓▓▓▓│</tspan>
+    <tspan x="400" dy="13">╰──────╯</tspan>
+  </text>
+
+  <!-- Corner accents -->
+  <path d="M 20,20 L 20,40 M 20,20 L 40,20" stroke="#c084fc" stroke-width="1" opacity="0.3"/>
+  <path d="M 780,20 L 780,40 M 780,20 L 760,20" stroke="#f472b6" stroke-width="1" opacity="0.3"/>
+  <path d="M 20,230 L 20,210 M 20,230 L 40,230" stroke="#f472b6" stroke-width="1" opacity="0.3"/>
+  <path d="M 780,230 L 780,210 M 780,230 L 760,230" stroke="#c084fc" stroke-width="1" opacity="0.3"/>
+</svg>
